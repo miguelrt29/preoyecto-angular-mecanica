@@ -1,0 +1,75 @@
+.arriba {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 120px;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.arriba p {
+    margin-top: 10px;
+}
+
+.padreGeneral {
+    height: 700px;
+}
+
+
+.padreServicios {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+}
+
+.primeraFila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.primeraFila p {
+    margin-top: 10px;
+}
+
+.primeraFila img {
+    height: 100px;
+}
+
+.padredos {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 20px;
+}
+
+.segunFila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.segunFila img {
+    height: 150px;
+}
+
+button {
+    margin-top: 20px;
+     background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border-style: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.segunFila p {
+    margin-top: 10px;
+}
