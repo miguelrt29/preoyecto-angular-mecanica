@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal} from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,5 +8,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './nav.css'
 })
 export class Nav {
+    protected readonly home = signal ("HOME");
+    protected readonly contactanos = signal ("CONTACTANOS");
+    protected readonly login = signal ("INICIAR SESIÓN");
+    protected readonly servicios = signal ("SERVICIOS");
 
 }

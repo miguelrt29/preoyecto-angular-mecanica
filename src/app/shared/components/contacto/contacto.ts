@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, signal } from '@angular/core';
 
 @Component({
   selector: 'app-contacto',
@@ -7,4 +7,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./contacto.css'],
   encapsulation: ViewEncapsulation.None   // 👈 agrega esta línea
 })
-export class ContactoComponent { }
+export class ContactoComponent {
+  protected readonly llamanos = signal("LLÁMANOS");
+  protected readonly escribenos = signal("ESCRÍBENOS");
+  protected readonly horario = signal("HORARIO");
+}

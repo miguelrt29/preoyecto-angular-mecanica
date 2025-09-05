@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Nav } from '../shared/components/nav/nav';
 import { Footer } from '../shared/components/footer/footer';
 import { Gris } from '../shared/components/gris/gris';
@@ -10,5 +10,6 @@ import { Gris } from '../shared/components/gris/gris';
   styleUrl: './restablecer.css'
 })
 export class Restablecer {
-
+  protected readonly restc = signal ("Restablecer Tu Contraseña");
+  protected readonly correo = signal ("Correo Electrónico");
 }

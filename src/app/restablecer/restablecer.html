@@ -2,12 +2,12 @@
   <div class="reset-card">
     <h2>Restablecer Contraseña</h2>
     <p class="reset-text">
-      Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.
+      Ingresa tu {{correo ()}} y te enviaremos un enlace para restablecer tu contraseña.
     </p>
 
     <form>
       <div class="input-group">
-        <label for="email">Correo electrónico</label>
+        <label for="email"> {{correo ()}} </label>
         <input type="email" id="email" placeholder="ejemplo@correo.com" required>
       </div>
 

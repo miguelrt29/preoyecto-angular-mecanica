@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Nav } from '../shared/components/nav/nav';
 import { Footer } from '../shared/components/footer/footer';
 import { ContactoComponent } from '../shared/components/contacto/contacto';
@@ -10,6 +10,11 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule, Nav, Footer, ContactoComponent, Gris],
   templateUrl: './home.html',
-  styleUrls: ['./home.css']   // 👈 plural y array
+  styleUrls: ['./home.css']
 })
-export class Home { }
+export class Home {
+  protected readonly servicios = signal("SERVICIOS DE REPARACIÓN");
+  protected readonly mecanica = signal("MECÁNICA");
+  protected readonly acc = signal("ACCESORIOS DE AUTÓMOVILES");
+  protected readonly reparacion = signal("REPARACIÓN DE AVERIAS")
+}

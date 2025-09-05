@@ -15,33 +15,14 @@
 
 /* Contenedor principal */
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
   align-items: start;
 }
 
-/* Información de contacto */
-.contact-info {
-  text-align: left;
-}
-
-.info-item {
-  margin-bottom: 25px;
-}
-
-.info-item h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #ffdcdc;
-}
-
-.info-item p {
-  margin: 4px 0;
-  font-size: 15px;
-}
 
 /* Formulario */
 .contact-form {

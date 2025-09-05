@@ -1,94 +1,193 @@
-/* Sección general */
-.login-section {
+/* login.css - estilo sencillo y directo */
+
+/* Sección: fondo degradado rojo */
+.seccion-login {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 56px 16px;
   background: linear-gradient(135deg, #e74c3c, #c0392b);
-  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Tarjeta */
-.login-card {
-  background: #fff;
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+/* Tarjeta blanca centrada */
+.tarjeta-login {
+  background: #ffffff;
   width: 100%;
-  max-width: 400px;
-  text-align: center;
-  animation: fadeIn 0.8s ease;
-}
-
-/* Título */
-.login-card h2 {
-  margin-bottom: 25px;
-  color: #c0392b;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-/* Inputs */
-.input-group {
-  margin-bottom: 20px;
+  max-width: 430px;
+  padding: 36px 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  color: #2c3e50;
   text-align: left;
 }
 
-.input-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 14px;
-  color: #333;
-  font-weight: 600;
+/* Título */
+.titulo-login {
+  text-align: center;
+  color: #c0392b;
+  margin: 0 0 18px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
-.input-group input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+/* Entradas */
+.grupo-entrada {
+  margin-bottom: 14px;
+}
+.grupo-entrada label {
+  display: block;
+  font-size: 13px;
+  color: #556;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+.grupo-entrada input {
+  width: 93%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
   font-size: 14px;
   outline: none;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.15s, border-color 0.15s;
 }
-
-.input-group input:focus {
+.grupo-entrada input:focus {
   border-color: #e74c3c;
-  box-shadow: 0 0 6px rgba(231, 76, 60, 0.5);
+  box-shadow: 0 6px 18px rgba(231,76,60,0.12);
 }
 
-/* Botón */
-.btn-login {
+/* Botón principal */
+.btn-principal {
   width: 100%;
   padding: 12px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
   background: linear-gradient(135deg, #e74c3c, #c0392b);
-  color: white;
-  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  box-shadow: 0 6px 18px rgba(192,57,43,0.16);
+  transition: transform 0.12s, opacity 0.12s;
 }
+.btn-principal:hover { transform: translateY(-3px); opacity: 0.97; }
 
-.btn-login:hover {
-  opacity: 0.9;
-}
-
-/* Enlace de restablecer contraseña */
-.forgot-password {
-  margin-top: 15px;
+/* Olvido de contraseña */
+.olvido-contrasena {
+  margin-top: 12px;
+  text-align: center;
   font-size: 14px;
 }
-
-.forgot-password a {
+.olvido-contrasena a {
   color: #c0392b;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.forgot-password a:hover {
+/* Crear cuenta */
+.fila-crear-cuenta {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+ color:  #e74c3c;
+}
+
+
+/* Modal (checkbox hack) */
+.alternador-modal { display: none; }
+.fondo-modal { display: none; }
+.modal-registro { display: none; }
+
+/* Mostrar backdrop y modal cuando el checkbox está checked */
+.alternador-modal:checked + .fondo-modal {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1100;
+}
+.alternador-modal:checked + .fondo-modal + .modal-registro {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1200;
+}
+
+/* Tarjeta modal */
+.tarjeta-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 560px;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  color: #2c3e50;
+  position: relative;
+}
+
+/* Cerrar modal */
+.cerrar-modal {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  background: transparent;
+  border: none;
+}
+
+/* Formulario del modal */
+.formulario-registro input {
+  width: 95%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 12px;
+  font-size: 14px;
+  outline: none;
+}
+.fila-dos {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.fila-dos input { flex: 1; }
+
+/* Botón crear cuenta (reutiliza estilo) */
+.formulario-registro .btn-principal {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+/* Texto pequeño */
+.texto-pequeno {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
+  gap: 10px;
+}
+.enlace-inline {
+  color: #e74c3c;
   text-decoration: underline;
+  cursor: pointer;
 }
 
+/* Responsive */
+@media (max-width: 520px) {
+  .tarjeta-login { padding: 20px; max-width: 95%; }
+  .fila-dos { flex-direction: column; }
+  .tarjeta-modal { padding: 16px; }
+}
 
-
+.enlace-modal{
+  cursor: pointer;
+}

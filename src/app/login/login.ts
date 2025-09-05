@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Nav } from '../shared/components/nav/nav';
 import { Footer } from '../shared/components/footer/footer';
 import { Gris } from '../shared/components/gris/gris';
@@ -12,5 +12,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './login.css'
 })
 export class Login {
+  protected readonly rest = signal ("Restablecer contraseña");
+  protected readonly login = signal ("Iniciar Sesión");
 
 }
