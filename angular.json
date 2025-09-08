@@ -13,7 +13,9 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "browser": "src/main.ts",
+            "outputPath": "dist/primera-app",
+            "index": "src/index.html",     
+            "browser": "src/main.ts",        
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
