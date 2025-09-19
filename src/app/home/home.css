@@ -52,6 +52,10 @@ button{
     cursor: pointer;
 }
 
+a{
+    text-decoration: none;
+}
+
 .visit{
     display: flex;
     flex-direction: column;

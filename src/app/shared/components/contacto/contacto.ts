@@ -11,4 +11,10 @@ export class ContactoComponent {
   protected readonly llamanos = signal("LLÁMANOS");
   protected readonly escribenos = signal("ESCRÍBENOS");
   protected readonly horario = signal("HORARIO");
+
+  protected readonly mostrarContacto = signal (false);
+
+  toogleContacto() {
+    this.mostrarContacto.update (valor => !valor);
+  }
 }

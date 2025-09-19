@@ -1,8 +1,10 @@
 <app-nav></app-nav>
+
 <section>
     <div class="arriba">
-        <h2>¿QUÉ {{servicio ()}} NECESITAS?</h2>
-        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis maiores esse laudantium!
+        <h2>¿QUÉ {{ servicio() }} NECESITAS?</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis maiores esse laudantium!
             <br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, corporis?
         </p>
@@ -10,106 +12,55 @@
 
     <div class="padreGeneral">
 
+        <!-- PRIMERA FILA -->
         <div class="padreServicios">
-            <div class="primeraFila">
-                <img src="assets/images/mecanica.png">
-                <h2>MECÁNICA GENERAL</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet.
+            <div *ngFor="let s of primeraFilaServicios" 
+                 [ngClass]="s.fila + ' ' + s.tipo"
+                 [ngStyle]="{'border-left': '4px solid ' + (s.tipo === 'mecanica' ? 'green' : s.tipo === 'revision' ? 'orange' : s.tipo === 'remolque' ? 'blue' : 'red')}">
+                
+                <img [src]="s.img">
+                <h2>{{ s.titulo }}</h2>
+                <p>
+                    <span *ngFor="let d of s.descripcion">{{ d }}<br></span>
                 </p>
-            </div>
 
-            <div class="primeraFila">
-                <img src="assets/images/servicio.png">
-                <h2> {{revision ()}} AUTOMÓVIL</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet.
-                </p>
-            </div>
+                <div [ngSwitch]="s.tipo">
+                    <span *ngSwitchCase="'mecanica'">🔧</span>
+                    <span *ngSwitchCase="'revision'">🛠️</span>
+                    <span *ngSwitchCase="'remolque'">🚚</span>
+                    <span *ngSwitchCase="'cambio'">🔋</span>
+                    <span *ngSwitchDefault>❓</span>
+                </div>
 
-            <div class="primeraFila">
-                <img src="assets/images/revisionaceite.png">
-                <h2> {{revision ()}} ACEITE/FRENOS</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet.
-                </p>
             </div>
         </div>
 
+        <!-- SEGUNDA FILA -->
         <div class="padredos">
-            <div class="segunFila">
-                <img src="assets/images/remolque.png">
-                <h2>SERVICIO DE REMOLQUE</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet.
+            <div *ngFor="let s of segundaFilaServicios" 
+                 [ngClass]="s.fila + ' ' + s.tipo"
+                 [ngStyle]="{'border-left': '4px solid ' + (s.tipo === 'mecanica' ? 'green' : s.tipo === 'revision' ? 'orange' : s.tipo === 'remolque' ? 'blue' : 'red')}">
+                
+                <img [src]="s.img">
+                <h2>{{ s.titulo }}</h2>
+                <p>
+                    <span *ngFor="let d of s.descripcion">{{ d }}<br></span>
                 </p>
-            </div>
 
+                <div [ngSwitch]="s.tipo">
+                    <span *ngSwitchCase="'mecanica'">🔧</span>
+                    <span *ngSwitchCase="'revision'">🛠️</span>
+                    <span *ngSwitchCase="'remolque'">🚚</span>
+                    <span *ngSwitchCase="'cambio'">🔋</span>
+                    <span *ngSwitchDefault>❓</span>
+                </div>
 
-            <div class="segunFila">
-                <img src="assets/images/cambioneumaticos.png">
-                <h2>{{cambio ()}} NEUMÁTICOS</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet.
-                </p>
-            </div>
-
-            <div class="segunFila">
-                <img src="assets/images/bateria.png">
-                <h2> {{cambio ()}} BATERÍA</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing.
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    <br>
-                    Lorem ipsum dolor sit amet.
-                </p>
             </div>
         </div>
 
     </div>
-
 </section>
 
 <app-contacto></app-contacto>
 <app-gris></app-gris>
 <app-footer></app-footer>
-

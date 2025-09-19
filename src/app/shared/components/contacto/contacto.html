@@ -1,4 +1,14 @@
 <section>
+
+
+  <div class="boton">
+    <button (click)="toogleContacto()">CONTACTO</button>
+  </div>
+
+  @if (mostrarContacto()){
+
+
+
   <div class="rojo">
     <div class="contacto">
       <img src="assets/images/telefono.png">
@@ -18,4 +28,10 @@
       <p>Lun-Vie: 07:00-22:00</p>
     </div>
   </div>
+  }
+
+
+  
+
+
 </section>

@@ -1,63 +1,110 @@
-/* Contenedor general */
-.rojo {
-  background: linear-gradient(135deg, #e74c3c, #c0392b);
-  color: #fff;
-  padding: 40px 20px;
+.boton{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap; /* ✅ Para que sea responsive */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  padding: 20px;
+background-color: rgb(214, 212, 212);
 }
 
-/* Cada bloque de contacto */
-.contacto {
-  flex: 1 1 200px; /* ✅ Crece y se adapta */
+
+.boton button{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  padding: 20px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, background 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5252;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.contacto:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.2);
+.boton:hover {
+  background-color: #fff;
+  color: #ff5252;
+  border: 2px solid #ff5252;
+  box-shadow: 5px 5px 0px #ff5252;
 }
 
-/* Iconos */
-.contacto img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-  filter: brightness(0) invert(1); /* ✅ Hace que el ícono sea blanco */
+.boton:active {
+  background-color: #8b8b8b;
+  box-shadow: none;
+  transform: translateY(4px);
 }
 
-/* Títulos */
-.contacto h3 {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
 
-/* Texto */
-.contacto p {
-  font-size: 16px;
-  margin: 0;
-  opacity: 0.9;
-}
 
-/* Responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-  .rojo {
-    flex-direction: column;
-    padding: 20px;
-  }
+    /* Contenedor general */
+    .rojo {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      color: #fff;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      /* ✅ Para que sea responsive */
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
 
-  .contacto {
-    width: 100%;
-  }
-}
+    /* Cada bloque de contacto */
+    .contacto {
+      flex: 1 1 200px;
+      /* ✅ Crece y se adapta */
+      text-align: center;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .contacto:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Iconos */
+    .contacto img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+      filter: brightness(0) invert(1);
+      /* ✅ Hace que el ícono sea blanco */
+    }
+
+    /* Títulos */
+    .contacto h3 {
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* Texto */
+    .contacto p {
+      font-size: 16px;
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    /* Responsivo para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .rojo {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .contacto {
+        width: 100%;
+      }
+    }
+
+    section button {
+      display: flex;
+      justify-content: center;
+    }
